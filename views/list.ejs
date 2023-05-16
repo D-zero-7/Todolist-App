@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('header'); -%>
+	<body>
+		<div
+			class="box"
+			id="heading"
+		>
+			<h1><%= listType %></h1>
+		</div>
+
+		<div class="box">
+			<% newItem.forEach(element => { %>
+			<form
+				action="/delete"
+				method="post"
+			>
+				<div class="item listItem">
+					<input
+						type="checkbox"
+						name="checkbox"
+						value="<%= element._id %>"
+						onchange="this.form.submit()"
+					/>
+					<p><%= element.name %></p>
+				</div>
+				<input
+					type="hidden"
+					name="listName"
+					value="<%= listType %>"
+				/>
+			</form>
+			<% }); %>
+
+			<form
+				class="item"
+				action="/"
+				method="post"
+			>
+				<input
+					type="text"
+					name="newItem"
+					placeholder="Add Task"
+					autocomplete="off"
+					autofocus="autofocus"
+				/>
+				<button
+					class="button_top"
+					type="submit"
+					name="list"
+					value="<%= listType %>"
+				>
+					+
+				</button>
+			</form>
+		</div>
+	</body>
+	<%- include('footer'); -%>
+</html>

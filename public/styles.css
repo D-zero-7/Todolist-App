@@ -1,0 +1,141 @@
+@keyframes blob {
+	0%,
+	100% {
+		background-position: 0 0;
+	}
+	25% {
+		background-position: 100% 0;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+	75% {
+		background-position: 0 100%;
+	}
+}
+
+html {
+	/* background-color: #e4e9fd; */
+	/* background-image: -webkit-linear-gradient(65deg, #a683e3 50%, #e4e9fd 50%); */
+	background-image: radial-gradient(#c0c0c0 6%, transparent 0);
+	background-size: 40px 40px;
+	background-position: center center;
+	min-height: -webkit-fill-available;
+	font-family: 'helvetica neue';
+	animation: blob 200s infinite alternate;
+}
+
+h1 {
+	color: #fff;
+	font-size: 1.7em;
+	padding: 0.3em;
+}
+
+.about {
+	color: #000000;
+	text-align: center;
+}
+
+.box {
+	max-width: 400px;
+	margin: 50px auto;
+	background: white;
+	border: #303030 solid;
+	border-radius: 5px;
+	box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.listItem {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	word-break: break-all;
+}
+.listItem p {
+	margin: 0;
+	font-size: 1.5em;
+	line-height: 1.5;
+	margin-right: 10px;
+	padding-left: 10px;
+}
+#heading {
+	background-color: #a683e3;
+	text-align: center;
+}
+
+.item {
+	min-height: 70px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #f1f1f1;
+}
+
+.item:last-child {
+	border-bottom: 0;
+}
+
+input:checked + p {
+	text-decoration: line-through;
+	text-decoration-color: #000000;
+}
+
+input[type='checkbox'] {
+	margin: 20px;
+	height: 30px;
+	width: 30px;
+}
+
+p {
+	margin: 0;
+	padding: 20px;
+	font-size: 1.5em;
+	font-weight: 200;
+	color: #00204a;
+}
+
+form.item {
+	text-align: center;
+	align-items: center;
+	margin-left: 20px;
+	padding: 0.5em;
+}
+
+button {
+	min-height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	border-color: transparent;
+	background-color: #a683e3;
+	color: #fff;
+	font-size: 30px;
+	padding-bottom: 6px;
+	border-width: 0;
+	text-align: center;
+}
+
+input[type='text'] {
+	text-align: center;
+	height: 60px;
+	top: 10px;
+	border: none;
+	background: transparent;
+	font-size: 20px;
+	font-weight: 200;
+	width: 313px;
+}
+
+input[type='text']:focus {
+	outline: none;
+	box-shadow: inset 0 -3px 0 0 #a683e3;
+}
+
+::placeholder {
+	color: grey;
+	opacity: 1;
+}
+
+footer {
+	color: white;
+	color: rgba(0, 0, 0, 0.5);
+	text-align: center;
+}
