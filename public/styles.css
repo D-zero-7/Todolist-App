@@ -22,7 +22,7 @@ html {
 	background-position: center center;
 	min-height: -webkit-fill-available;
 	font-family: 'helvetica neue';
-	animation: blob 200s infinite alternate;
+	animation: blob 180s infinite alternate;
 }
 
 h1 {
